@@ -999,3 +999,74 @@ nav ul {
     font-size: 0.8rem;
   }
 }
+
+/* Força o cabeçalho a ficar em uma linha só no celular */
+header,
+.header-container {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  padding: 10px 5px !important;
+}
+
+/* Diminui o texto do menu para caber tudo lado a lado */
+header h1,
+.logo {
+  font-size: 14px !important;
+}
+nav ul {
+  display: flex !important;
+  gap: 5px !important;
+}
+nav ul li a {
+  font-size: 10px !important;
+}
+
+/* --- A PARTE PRINCIPAL (BONECO E TEXTO) --- */
+
+/* Força a seção principal a ser horizontal (Row) */
+#home,
+.hero,
+.main-content {
+  display: flex !important;
+  flex-direction: row !important; /* Isso mantém o boneco na esquerda e o texto na direita */
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 10px !important;
+  height: auto !important;
+}
+
+/* Ajusta o tamanho do boneco para não ocupar a tela toda */
+.boneco,
+.hero-image,
+.image-container img {
+  width: 40% !important; /* Boneco na esquerda ocupando 40% */
+  height: auto !important;
+  margin: 0 !important;
+}
+
+/* Ajusta o bloco de texto para ficar na direita */
+.texto-principal,
+.hero-text,
+.content-box {
+  width: 55% !important; /* Texto na direita ocupando 55% */
+  text-align: left !important; /* Alinha o texto à esquerda dele mesmo */
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+/* Diminui os textos para não quebrarem layout no celular */
+.texto-principal h2,
+.hero-text h1 {
+  font-size: 18px !important;
+}
+.texto-principal p,
+.hero-text p {
+  font-size: 12px !important;
+}
+.btn-cv,
+button {
+  padding: 5px 10px !important;
+  font-size: 12px !important;
+}
