@@ -967,3 +967,35 @@ body {
     margin: 20px auto 0 auto;
   }
 }
+
+/* Força o cabeçalho a ficar lado a lado em qualquer tamanho de tela */
+header,
+.header-container {
+  display: flex !important;
+  flex-direction: row !important; /* Garante que fiquem na horizontal */
+  justify-content: space-between !important; /* Nome de um lado, menu do outro */
+  align-items: center !important;
+  flex-wrap: nowrap !important; /* Impede que os itens pulem de linha */
+  padding: 10px 5% !important;
+}
+
+/* Garante que a lista de links também fique na horizontal no celular */
+nav ul {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 15px; /* Espaço entre os links */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Ajuste opcional: diminui um pouco a letra no celular para caber tudo */
+@media (max-width: 480px) {
+  header h1,
+  .logo {
+    font-size: 1.2rem;
+  }
+  nav ul li a {
+    font-size: 0.8rem;
+  }
+}
