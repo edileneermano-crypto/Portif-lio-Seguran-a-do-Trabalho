@@ -785,3 +785,110 @@ section-title {
     align-items: center;
   }
 }
+
+/* =====================================================
+   RESPONSIVIDADE EXTRA — AJUSTES MOBILE
+   (NÃO altera desktop)
+===================================================== */
+
+@media (max-width: 768px) {
+  /* HEADER */
+  header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .logo {
+    text-align: center;
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  nav ul {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 14px;
+  }
+
+  /* HERO / IMAGEM DE FUNDO */
+  .imagem-fundo {
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 20px;
+    height: auto;
+    text-align: center;
+  }
+
+  .container-boneco {
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+
+  .boneco-animado {
+    max-height: 320px;
+  }
+
+  /* TEXTO HERO */
+  .hero-conteudo h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .hero-conteudo p {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .conteudo {
+    align-items: center;
+  }
+
+  .btn-cv {
+    margin-left: 0;
+  }
+
+  /* SOBRE MIM */
+  .sobre-mim {
+    padding: 50px 20px;
+  }
+
+  .sobre-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-imagem img {
+    width: 240px;
+  }
+
+  .sobre-texto {
+    text-align: justify;
+  }
+
+  /* HABILIDADES */
+  .habilidades {
+    padding: 50px 20px;
+  }
+
+  .habilidades-grid {
+    flex-direction: column;
+  }
+
+  .card-skill {
+    min-width: 100%;
+  }
+
+  /* CONTATO */
+  #contato {
+    padding: 40px 20px;
+  }
+
+  .contact-form {
+    padding: 30px 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
