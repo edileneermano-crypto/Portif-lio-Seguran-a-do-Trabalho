@@ -1000,73 +1000,86 @@ nav ul {
   }
 }
 
-/* Força o cabeçalho a ficar em uma linha só no celular */
+/* Limpa qualquer configuração anterior e aplica o layout lado a lado */
+
+/* 1. CABEÇALHO (JOÃO CARLOS E MENU) */
 header,
 .header-container {
   display: flex !important;
   flex-direction: row !important;
   justify-content: space-between !important;
+  align-items: center !important;
   padding: 10px 5px !important;
+  flex-wrap: nowrap !important; /* Impede que o menu pule de linha */
 }
 
-/* Diminui o texto do menu para caber tudo lado a lado */
 header h1,
 .logo {
   font-size: 14px !important;
+  white-space: nowrap !important;
 }
+
 nav ul {
   display: flex !important;
-  gap: 5px !important;
+  flex-direction: row !important; /* Mantém os itens do menu um ao lado do outro */
+  gap: 6px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
 }
+
 nav ul li a {
   font-size: 10px !important;
+  white-space: nowrap !important; /* Faz o 'Sobre mim' ficar reto em uma linha só */
 }
 
-/* --- A PARTE PRINCIPAL (BONECO E TEXTO) --- */
-
-/* Força a seção principal a ser horizontal (Row) */
-#home,
+/* 2. CONTEÚDO PRINCIPAL (BONECO À ESQUERDA E TEXTO À DIREITA) */
+/* Altere .hero ou #home para o nome da sua seção principal se necessário */
 .hero,
-.main-content {
+#home,
+.main-container {
   display: flex !important;
-  flex-direction: row !important; /* Isso mantém o boneco na esquerda e o texto na direita */
+  flex-direction: row !important; /* Força o boneco e texto a ficarem lado a lado no celular */
   align-items: center !important;
-  justify-content: space-between !important;
-  padding: 10px !important;
+  justify-content: flex-start !important;
+  padding: 20px 10px !important;
+  gap: 10px !important;
+}
+
+/* O Boneco */
+.hero-image img,
+.image-container img,
+.boneco {
+  width: 35% !important; /* Reduz o tamanho do boneco para caber o texto ao lado */
+  max-width: 140px !important;
   height: auto !important;
 }
 
-/* Ajusta o tamanho do boneco para não ocupar a tela toda */
-.boneco,
-.hero-image,
-.image-container img {
-  width: 40% !important; /* Boneco na esquerda ocupando 40% */
-  height: auto !important;
-  margin: 0 !important;
-}
-
-/* Ajusta o bloco de texto para ficar na direita */
-.texto-principal,
+/* O Texto e o Botão */
 .hero-text,
-.content-box {
-  width: 55% !important; /* Texto na direita ocupando 55% */
-  text-align: left !important; /* Alinha o texto à esquerda dele mesmo */
+.texto-principal {
+  width: 60% !important; /* Dá o restante do espaço para o texto */
   display: flex !important;
   flex-direction: column !important;
-  align-items: flex-start !important;
+  align-items: flex-start !important; /* Alinha o texto e botão à esquerda dele mesmo */
+  text-align: left !important;
 }
 
-/* Diminui os textos para não quebrarem layout no celular */
-.texto-principal h2,
-.hero-text h1 {
-  font-size: 18px !important;
+/* Ajuste das fontes para não amontoar */
+.hero-text h1,
+.texto-principal h2 {
+  font-size: 16px !important;
+  margin-bottom: 5px !important;
 }
-.texto-principal p,
-.hero-text p {
+.hero-text p,
+.texto-principal p {
   font-size: 12px !important;
+  margin-bottom: 10px !important;
 }
+
+/* Botão Baixar CV (Tamanho normal) */
 .btn-cv,
 button {
-  padding: 5px 10px !important;
-  font-size: 12px !important;
+  display: inline-block !important;
+  padding: 10px 15px !important;
 }
